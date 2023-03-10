@@ -43,12 +43,13 @@ Take a look at the [bitcore guide](http://bitcore.io/guide/peer.html) on the usa
 
 ## Contributing
 
-Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/dashevo/dashcore-p2p/blob/master/CONTRIBUTING.md) file.
+Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/socialruins/raptoreumcore-p2p/blob/master/CONTRIBUTING.md) file.
 
 ## License
 
-Code released under [the MIT license](https://github.com/dashevo/dashcore/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/socialruins/raptoreumcore-lib/blob/master/LICENSE).
 
 Copyright 2013-2017 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.  
 Copyright 2016-2017 The Dash Foundation, Inc.  
 Copyright 2017-2018 Dash Core Group, Inc.  
+Copyright 2023 
