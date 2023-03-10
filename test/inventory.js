@@ -4,19 +4,19 @@
 
 var should = require('chai').should();
 
-var dashcore = require('@dashevo/dashcore-lib');
+var raptoreumcore = require("@socialruins/raptoreumcore-lib");
 var P2P = require('../');
 var Inventory = P2P.Inventory;
-var BufferUtils = dashcore.util.buffer;
-var BufferWriter = dashcore.encoding.BufferWriter;
-var BufferReader = dashcore.encoding.BufferReader;
+var BufferUtils = raptoreumcore.util.buffer;
+var BufferWriter = raptoreumcore.encoding.BufferWriter;
+var BufferReader = raptoreumcore.encoding.BufferReader;
 
 describe('Inventory', function() {
 
-  var hash = new Buffer('eb951630aba498b9a0d10f72b5ea9e39d5ff04b03dc2231e662f52057f948aa1', 'hex');
+  var hash = new Buffer('e6a2283a5b930856f6b97befeb27935bb90655581cbd2e53c46bc127ed9065ac', 'hex');
   var hashedStr = BufferUtils.reverse(new Buffer(hash, 'hex')).toString('hex');
   var inventoryBuffer = new Buffer(
-    '01000000eb951630aba498b9a0d10f72b5ea9e39d5ff04b03dc2231e662f52057f948aa1',
+    '01000000e6a2283a5b930856f6b97befeb27935bb90655581cbd2e53c46bc127ed9065ac',
     'hex'
   );
 

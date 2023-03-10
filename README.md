@@ -1,22 +1,19 @@
-Dashcore P2P
+Raptoreumcore P2P
 =======
 
-[![NPM Package](https://img.shields.io/npm/v/@dashevo/dashcore-p2p.svg?style=flat-square)](https://www.npmjs.org/package/@dashevo/dashcore-p2p)
-[![Build Status](https://github.com/dashevo/dashcore-p2p/actions/workflows/test_and_release.yml/badge.svg)](https://github.com/dashevo/dashcore-p2p/actions/workflows/test_and_release.yml)
+`raptoreumcore-p2p` adds Raptoreum protocol support for RaptoreumCore.
 
-`dashcore-p2p` adds Dash protocol support for Dashcore.
-
-See [the main dashcore-lib repo](https://github.com/dashevo/dashcore-lib) for more information.
+See [the main raptoreumcore-lib repo](https://github.com/socialruins/raptoreumcore-lib) for more information.
 
 ## Getting Started
 
 ```sh
-npm install @dashevo/dashcore-p2p
+npm install github:socialruins/raptoreumcore-p2p
 ```
 In order to connect to the Dash network, you'll need to know the IP address of at least one node of the network, or use [Pool](/docs/pool.md) to discover peers using a DNS seed.
 
 ```javascript
-var Peer = require('@dashevo/dashcore-p2p').Peer;
+var Peer = require('@socialruins/raptoreumcore-p2p').Peer;
 
 var peer = new Peer({host: '127.0.0.1'});
 

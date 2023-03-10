@@ -12,7 +12,7 @@ on:
 
 jobs:
   test:
-    name: Run Dashcore P2P tests
+    name: Run Raptoreumcore P2P tests
     runs-on: ubuntu-20.04
     timeout-minutes: 10
     steps:

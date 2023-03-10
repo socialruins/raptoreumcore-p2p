@@ -6,19 +6,19 @@ var chai = require('chai');
 var should = chai.should();
 var sinon = require('sinon');
 
-var dashcore = require('@dashevo/dashcore-lib');
-var _ = dashcore.deps._;
-var Random = dashcore.crypto.Random;
-var BN = dashcore.crypto.BN;
-var BufferUtil = dashcore.util.buffer;
+var raptoreumcore = require("@socialruins/raptoreumcore-lib");
+var _ = raptoreumcore.deps._;
+var Random = raptoreumcore.crypto.Random;
+var BN = raptoreumcore.crypto.BN;
+var BufferUtil = raptoreumcore.util.buffer;
 var p2p = require('../');
 var Peer = p2p.Peer;
 var Pool = p2p.Pool;
-var Networks = dashcore.Networks;
+var Networks = raptoreumcore.Networks;
 var Messages = p2p.Messages;
 var Inventory = p2p.Inventory;
-var Block = dashcore.Block;
-var Transaction = dashcore.Transaction;
+var Block = raptoreumcore.Block;
+var Transaction = raptoreumcore.Transaction;
 
 // config
 var network = process.env.NETWORK === 'testnet' ? Networks.testnet : Networks.livenet;
@@ -26,20 +26,20 @@ var messages = new Messages({
   network: network
 });
 var blockHash = {
-  'livenet': '0000000000010eedb86810ef7ce941fabc7d2be0c0fa2bf8dfcb5b48f573d15b',
+  'livenet': 'e6a2283a5b930856f6b97befeb27935bb90655581cbd2e53c46bc127ed9065ac',
   'testnet': '0000000058cc069d964711cd25083c0a709f4df2b34c8ff9302ce71fe5b45786'
 };
 var stopBlock = {
-  'livenet': '000000000014838031ed3c985716212e048a7e2a6bcd84ad8591587c38f4597a',
+  'livenet': 'dfcb8a20de6310de27f4450eb0225f82875c43e4a8fe4cfec28d2a8b4c17252d',
   'testnet': '00000000d0bc4271bcefaa7eb25000e345910ba16b91eb375cd944b68624de9f'
 };
 var txHash = {
-  'livenet': 'c38e4e2e65d669fdc5eba65f7127dda7aa9394c1d51e60f34712d0b6fb8843b0',
+  'livenet': '349fbfb92b89b2a42e771f6ef3be2af26f7c5e60d8588be591005b674c8c0fcd',
   'testnet': '22231e8219a0617a0ded618b5dc713fdf9b0db8ebd5bb3322d3011a703119d3b'
 };
 
 // These tests require a running dashd instance
-describe('Integration with ' + network.name + ' dashd', function() {
+describe('Integration with ' + network.name + ' raptoreumd', function() {
 
   this.timeout(15000);
   var opts = {

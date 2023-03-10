@@ -6,14 +6,14 @@ var chai = require('chai');
 var should = chai.should();
 var expect = chai.expect;
 
-var dashcore = require('@dashevo/dashcore-lib');
+var raptoreumcore = require("@socialruins/raptoreumcore-lib");
 var P2P = require('../');
 var Peer = P2P.Peer;
 var MessagesData = require('./data/messages');
 var Messages = P2P.Messages;
 var messages = new Messages();
 var Pool = P2P.Pool;
-var Networks = dashcore.Networks;
+var Networks = raptoreumcore.Networks;
 
 var dns = require('dns');
 var sinon = require('sinon');

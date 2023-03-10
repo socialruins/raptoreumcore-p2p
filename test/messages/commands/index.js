@@ -5,7 +5,7 @@ var expect = require('chai').expect;
 var P2P = require('../../../');
 var Messages = P2P.Messages;
 var sinon = require('sinon');
-var dashcore = require('@dashevo/dashcore-lib');
+var raptoreumcore = require("@socialruins/raptoreumcore-lib");
 
 describe('Command Messages', function() {
 
@@ -46,18 +46,18 @@ describe('Command Messages', function() {
   describe('Transaction', function() {
 
     it('should accept a transaction instance as an argument', function() {
-      var tx = new dashcore.Transaction();
+      var tx = new raptoreumcore.Transaction();
       var message = messages.Transaction(tx);
-      message.transaction.should.be.instanceof(dashcore.Transaction);
+      message.transaction.should.be.instanceof(raptoreumcore.Transaction);
     });
 
     it('should create a transaction instance', function() {
       var message = messages.Transaction();
-      message.transaction.should.be.instanceof(dashcore.Transaction);
+      message.transaction.should.be.instanceof(raptoreumcore.Transaction);
     });
 
     it('version should remain the same', function() {
-      var tx = new dashcore.Transaction();
+      var tx = new raptoreumcore.Transaction();
       var version = Number(tx.version);
       var message = messages.Transaction(tx);
       message.transaction.version.should.equal(version);
@@ -68,18 +68,18 @@ describe('Command Messages', function() {
   describe('TXLockRequest', function() {
 
       it('should accept a transaction instance as an argument', function() {
-          var tx = new dashcore.Transaction();
+          var tx = new raptoreumcore.Transaction();
           var message = messages.TXLockRequest(tx);
-          message.transaction.should.be.instanceof(dashcore.Transaction);
+          message.transaction.should.be.instanceof(raptoreumcore.Transaction);
       });
 
       it('should create a transaction instance', function() {
           var message = messages.TXLockRequest();
-          message.transaction.should.be.instanceof(dashcore.Transaction);
+          message.transaction.should.be.instanceof(raptoreumcore.Transaction);
       });
 
       it('version should remain the same', function() {
-          var tx = new dashcore.Transaction();
+          var tx = new raptoreumcore.Transaction();
           var version = Number(tx.version);
           var message = messages.TXLockRequest(tx);
           message.transaction.version.should.equal(version);
@@ -100,12 +100,12 @@ describe('Command Messages', function() {
   describe('Block', function() {
 
     it('should accept a block instance as an argument', function() {
-      var block = new dashcore.Block({
+      var block = new raptoreumcore.Block({
         header: {},
         transactions: []
       });
       var message = messages.Block(block);
-      message.block.should.be.instanceof(dashcore.Block);
+      message.block.should.be.instanceof(raptoreumcore.Block);
     });
 
   });

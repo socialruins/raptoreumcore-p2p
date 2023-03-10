@@ -3,7 +3,8 @@
 var should = require('chai').should();
 var P2P = require('../../');
 var Message = P2P.Messages.Message;
-var Networks = require('@dashevo/dashcore-lib').Networks;
+var raptoreumcore = require("@socialruins/raptoreumcore-lib");
+var Networks = raptoreumcore.Networks;
 
 describe('Message', function() {
 
@@ -11,13 +12,13 @@ describe('Message', function() {
     it('construct with magic number and command', function() {
       var message = new Message({
         network: {
-          networkMagic: 0xd9b4bef9
+          networkMagic: 0x2e6d7472
         },
         command: 'command'
       });
       should.exist(message);
       message.command.should.equal('command');
-      message.network.networkMagic.should.equal(0xd9b4bef9);
+      message.network.networkMagic.should.equal(0x2e6d7472);
     });
   });
 

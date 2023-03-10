@@ -4,8 +4,8 @@
 
 var should = require('chai').should();
 var utils = require('../../lib/messages/utils');
-var dashcore = require('@dashevo/dashcore-lib');
-var BufferReader = dashcore.encoding.BufferReader;
+var raptoreumcore = require("@socialruins/raptoreumcore-lib");
+var BufferReader = raptoreumcore.encoding.BufferReader;
 
 describe('Message Utils', function() {
 

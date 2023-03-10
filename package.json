@@ -1,8 +1,8 @@
 {
-  "name": "@dashevo/dashcore-p2p",
+  "name": "@socialruins/raptoreumcore-p2p",
   "version": "1.2.2",
-  "description": "Interface to the dash P2P network for Dashcore",
-  "author": "Dash Core Group, Inc. <dev@dash.org>",
+  "description": "Interface to the Raptoreum P2P network for Raptoreumcore",
+  "author": "socialruins",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -43,16 +43,16 @@
     }
   ],
   "keywords": [
-    "dash",
+    "raptoreum",
     "bitcore",
-    "dashcore"
+    "raptoreumcore"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/dashcore-p2p.git"
+    "url": "https://github.com/socialruins/raptoreumcore-p2p.git"
   },
   "dependencies": {
-    "@dashevo/dashcore-lib": "^0.19.25",
+    "@socialruins/raptoreumcore-lib": "github:socialruins/raptoreumcore-lib",
     "bloom-filter": "^0.2.0",
     "node-buffers": "^0.1.1",
     "socks5-client": "^1.2.8"

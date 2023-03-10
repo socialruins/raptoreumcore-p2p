@@ -8,3 +8,5 @@ coverage
 
 # ignore build artifacts
 dist
+
+package-lock.json

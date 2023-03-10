@@ -1,4 +1,4 @@
-var dashcore = require('@dashevo/dashcore-lib');
-dashcore.P2P = require('./lib');
+var raptoreumcore = require("@socialruins/raptoreumcore-lib");
+raptoreumcore.P2P = require('./lib');
 
-module.exports = dashcore.P2P;
+module.exports = raptoreumcore.P2P;

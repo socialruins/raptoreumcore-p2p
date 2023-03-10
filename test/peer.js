@@ -10,14 +10,14 @@ var expect = chai.expect;
 var sinon = require('sinon');
 var fs = require('fs');
 
-var dashcore = require('@dashevo/dashcore-lib');
-var _ = dashcore.deps._;
+var raptoreumcore = require("@socialruins/raptoreumcore-lib");
+var _ = raptoreumcore.deps._;
 var P2P = require('../');
 var Peer = P2P.Peer;
 var EventEmitter = require('events').EventEmitter;
 var Messages = P2P.Messages;
 var messages = new Messages();
-var Networks = dashcore.Networks;
+var Networks = raptoreumcore.Networks;
 
 describe('Peer', function() {
 
