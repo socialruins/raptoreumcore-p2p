@@ -26,15 +26,15 @@ var messages = new Messages({
   network: network
 });
 var blockHash = {
-  'livenet': 'e6a2283a5b930856f6b97befeb27935bb90655581cbd2e53c46bc127ed9065ac',
+  'livenet': 'b79e5df07278b9567ada8fc655ffbfa9d3f586dc38da3dd93053686f41caeea0',
   'testnet': '0000000058cc069d964711cd25083c0a709f4df2b34c8ff9302ce71fe5b45786'
 };
 var stopBlock = {
-  'livenet': 'dfcb8a20de6310de27f4450eb0225f82875c43e4a8fe4cfec28d2a8b4c17252d',
+  'livenet': 'f3abdb06eb89bb87542f26c13fc84a9aa7f73bba226eb2884bee3b61304b4032',
   'testnet': '00000000d0bc4271bcefaa7eb25000e345910ba16b91eb375cd944b68624de9f'
 };
 var txHash = {
-  'livenet': '349fbfb92b89b2a42e771f6ef3be2af26f7c5e60d8588be591005b674c8c0fcd',
+  'livenet': '6825d38086e90353cfcec29724203f35dc7b3124efe3d112004a17d91d3f544e',
   'testnet': '22231e8219a0617a0ded618b5dc713fdf9b0db8ebd5bb3322d3011a703119d3b'
 };
 
