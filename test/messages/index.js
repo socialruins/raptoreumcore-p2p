@@ -12,13 +12,13 @@ var Data = require("../data/messages"); //todo merge with commandData
 var commandData = require("../data/messages.json");
 
 function getPayloadBuffer(messageBuffer) {
-  return new Buffer(messageBuffer.slice(48), "hex");
+  return Buffer.from(messageBuffer.slice(48), "hex");
 }
 
 describe("Messages", function () {
   var buildMessage = function (hex) {
     var m = Buffers();
-    m.push(new Buffer(hex, "hex"));
+    m.push(Buffer.from(hex, "hex"));
     return m;
   };
 
@@ -81,7 +81,7 @@ describe("Messages", function () {
           .toString("hex")
           .should.equal(payloadBuffer.toString("hex"));
         outputBuffer.should.deep.equal(payloadBuffer);
-        var expectedBuffer = new Buffer(commandData[command].message, "hex");
+        var expectedBuffer = Buffer.from(commandData[command].message, "hex");
         message.toBuffer().should.deep.equal(expectedBuffer);
         done();
       });

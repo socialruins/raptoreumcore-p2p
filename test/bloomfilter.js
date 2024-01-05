@@ -10,7 +10,7 @@ var P2P = require("../");
 var BloomFilter = P2P.BloomFilter;
 
 function getPayloadBuffer(messageBuffer) {
-  return new Buffer(messageBuffer.slice(48), "hex");
+  return Buffer.from(messageBuffer.slice(48), "hex");
 }
 
 // convert a hex string to a bytes buffer
@@ -73,13 +73,13 @@ describe("BloomFilter", function () {
     );
 
     var actual = filter.toBuffer();
-    var expected = new Buffer("03614e9b050000000000000001", "hex");
+    var expected = Buffer.from("03614e9b050000000000000001", "hex");
 
     actual.should.deep.equal(expected);
   });
 
   it("deserialize a buffer", function () {
-    var buffer = new Buffer("03614e9b050000000000000001", "hex");
+    var buffer = Buffer.from("03614e9b050000000000000001", "hex");
     var filter = BloomFilter.fromBuffer(buffer);
 
     assert(

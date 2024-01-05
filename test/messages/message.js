@@ -27,10 +27,10 @@ describe("Message", function () {
         network: Networks.defaultNetwork,
       });
       message.getPayload = function () {
-        return new Buffer(0);
+        return Buffer.alloc(0);
       };
       var buffer = message.toBuffer();
-      var expectedBuffer = new Buffer(
+      var expectedBuffer = Buffer.from(
         "f9beb4d9636f6d6d616e640000000000000000005df6e0e2",
         "hex",
       );
