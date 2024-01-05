@@ -1,6 +1,6 @@
 {
   "name": "@socialruins/raptoreumcore-p2p",
-  "version": "2.0",
+  "version": "2.0.0",
   "description": "Interface to the Raptoreum P2P network for Raptoreumcore",
   "author": "socialruins",
   "main": "index.js",
