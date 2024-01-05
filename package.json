@@ -1,47 +1,16 @@
 {
   "name": "@socialruins/raptoreumcore-p2p",
-  "version": "1.2.2",
+  "version": "2.0",
   "description": "Interface to the Raptoreum P2P network for Raptoreumcore",
   "author": "socialruins",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
-    "test": "mocha './test/**/*.js'",
-    "coverage": "nyc mocha"
+    "test": "gulp test",
+    "test:ci": "npm run test",
+    "coverage": "gulp coverage",
+    "build": "gulp",
+    "pub": "npm run build && npm publish"
   },
-  "contributors": [
-    {
-      "name": "Yemel Jardi",
-      "email": "yemel@bitpay.com"
-    },
-    {
-      "name": "Braydon Fuller",
-      "email": "braydon@bitpay.com"
-    },
-    {
-      "name": "Ryan X. Charles",
-      "email": "ryan@bitpay.com"
-    },
-    {
-      "name": "Eric Martindale",
-      "email": "eric@bitpay.com"
-    },
-    {
-      "name": "Philip Hutchins",
-      "email": "philip@bitpay.com"
-    },
-    {
-      "name": "Manuel Araoz",
-      "email": "maraoz@bitpay.com"
-    },
-    {
-      "name": "Esteban Ordano",
-      "email": "eordano@gmail.com"
-    },
-    {
-      "name": "Elichai Turkel"
-    }
-  ],
   "keywords": [
     "raptoreum",
     "bitcore",
@@ -54,17 +23,15 @@
   "dependencies": {
     "@socialruins/raptoreumcore-lib": "github:socialruins/raptoreumcore-lib",
     "bloom-filter": "^0.2.0",
-    "node-buffers": "^0.1.1",
-    "socks5-client": "^1.2.8"
+    "buffers": "bitpay/node-buffers#v0.1.2-bitpay",
+    "socks5-client": "^0.3.6"
   },
   "devDependencies": {
-    "chai": "^4.3.0",
-    "eslint": "^7.21.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "mocha": "^8.3.0",
-    "nyc": "^15.1.0",
-    "sinon": "^9.2.4"
+    "bitcore-build": "^10.0.21",
+    "brfs": "^1.2.0",
+    "chai": "~1.10.0",
+    "gulp": "^4.0.0",
+    "sinon": "^1.12.2"
   },
   "license": "MIT"
 }
